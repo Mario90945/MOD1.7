@@ -1,0 +1,468 @@
+/* ==========================================================================
+   CONFIGURACIÓN GENERAL Y PALETA DE COLORES
+   ========================================================================== */
+:root {
+    /* FONDO GRIS CLARO FUTURISTA */
+    --bg-gris-claro: #edf2f7;
+    --bg-card-blanco: #ffffff;
+    
+    /* AZULES FUTURISTAS ASISTCORE */
+    --azul-oscuro-header: #0b132b;
+    --azul-real-principal: #1c2541;
+    --azul-vibrante-acento: #2563eb;
+    --cyan-neon-glow: #00f5d4;
+    
+    /* TIPOGRAFÍA Y TEXTOS */
+    --texto-titulo: #0f172a;
+    --texto-cuerpo: #334155;
+    --texto-secundario: #64748b;
+    
+    --font-titulos: 'Montserrat', sans-serif;
+    --font-cuerpo: 'Roboto', sans-serif;
+    
+    --sombra-elegante: 0 10px 25px -5px rgba(15, 23, 42, 0.08), 0 8px 10px -6px rgba(15, 23, 42, 0.04);
+    --sombra-hover: 0 20px 30px -10px rgba(37, 99, 235, 0.2);
+    --transicion: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+/* RESET BASICO */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+/* FONDO CON TEXTURA SUBTIL/TRANSPARENTE SIMIL TRAMA FUTURISTA */
+body {
+    font-family: var(--font-cuerpo);
+    background-color: var(--bg-gris-claro);
+    /* Fondo con textura sutil de pincelada/patrón tecnológico transparente */
+    background-image: 
+        radial-gradient(rgba(37, 99, 235, 0.05) 2px, transparent 0),
+        radial-gradient(rgba(11, 19, 43, 0.04) 2px, transparent 0);
+    background-size: 30px 30px;
+    background-position: 0 0, 15px 15px;
+    color: var(--texto-cuerpo);
+    line-height: 1.6;
+    overflow-x: hidden;
+}
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* ENCABEZADOS DE SECCIÓN REUTILIZABLES */
+.seccion-encabezado {
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.tag-subtitulo {
+    display: inline-block;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--azul-vibrante-acento);
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    font-size: 0.8rem;
+    padding: 6px 16px;
+    border-radius: 20px;
+    letter-spacing: 1px;
+    margin-bottom: 10px;
+}
+
+.seccion-encabezado h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.3rem;
+    color: var(--texto-titulo);
+    font-weight: 800;
+}
+
+.descripcion-subtitulo {
+    color: var(--texto-secundario);
+    font-size: 1.05rem;
+    max-width: 650px;
+    margin: 8px auto 0;
+}
+
+/* ==========================================================================
+   1. CABECERA Y MENÚ DE NAVEGACIÓN
+   ========================================================================== */
+.header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 5%;
+    background: rgba(11, 19, 43, 0.95);
+    backdrop-filter: blur(12px);
+    z-index: 1000;
+    border-bottom: 2px solid rgba(0, 245, 212, 0.2);
+}
+
+.logo {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.logo-img {
+    width: 42px;
+    height: 42px;
+    object-fit: contain;
+}
+
+.logo h1 {
+    font-family: var(--font-titulos);
+    font-size: 1.7rem;
+    color: #ffffff;
+    font-weight: 800;
+}
+
+.logo h1 span { color: var(--cyan-neon-glow); }
+
+.nav ul {
+    display: flex;
+    list-style: none;
+    gap: 25px;
+}
+
+.nav a {
+    color: #e2e8f0;
+    text-decoration: none;
+    font-weight: 500;
+    transition: var(--transicion);
+    font-size: 0.95rem;
+}
+
+.nav a:hover { color: var(--cyan-neon-glow); }
+
+.btn-login {
+    background: var(--azul-vibrante-acento);
+    color: #ffffff;
+    padding: 8px 22px;
+    border-radius: 20px;
+    font-family: var(--font-titulos);
+    font-weight: 700;
+    text-decoration: none;
+    transition: var(--transicion);
+}
+
+.btn-login:hover {
+    background: var(--cyan-neon-glow);
+    color: var(--azul-oscuro-header);
+}
+
+/* ==========================================================================
+   2. BANNER DESPLAZABLE (SLIDER)
+   ========================================================================== */
+.slider-container {
+    position: relative;
+    width: 100%;
+    height: 72vh;
+    margin-top: 65px;
+    overflow: hidden;
+    background: #000;
+}
+
+.slider-track {
+    display: flex;
+    width: 100%;
+    height: 100%;
+    transition: transform 0.5s ease-in-out;
+}
+
+.slide {
+    min-width: 100%;
+    height: 100%;
+    position: relative;
+}
+
+.slide img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    filter: brightness(0.55);
+}
+
+.slide-caption {
+    position: absolute;
+    bottom: 18%;
+    left: 8%;
+    max-width: 600px;
+    color: #ffffff;
+}
+
+.slide-caption h2 {
+    font-family: var(--font-titulos);
+    font-size: 2.5rem;
+    font-weight: 800;
+    margin-bottom: 10px;
+}
+
+.slider-btn {
+    position: absolute;
+    top: 50%;
+    transform: translateY(-50%);
+    background: rgba(11, 19, 43, 0.8);
+    border: 1px solid var(--cyan-neon-glow);
+    color: var(--cyan-neon-glow);
+    font-size: 1.5rem;
+    width: 45px;
+    height: 45px;
+    border-radius: 50%;
+    cursor: pointer;
+    z-index: 10;
+}
+
+.prev-btn { left: 20px; }
+.next-btn { right: 20px; }
+
+.slider-dots {
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 8px;
+}
+
+.dot {
+    width: 10px;
+    height: 10px;
+    background: rgba(255, 255, 255, 0.4);
+    border-radius: 50%;
+    cursor: pointer;
+}
+
+.dot.active {
+    background: var(--cyan-neon-glow);
+    width: 25px;
+    border-radius: 10px;
+}
+
+/* ==========================================================================
+   3. SECCIÓN NOSOTROS (DISEÑO MODERNO Y ORGANIZADO)
+   ========================================================================== */
+.seccion-nosotros {
+    padding: 80px 0;
+}
+
+/* TARJETAS ESTILO MODERNO */
+.card-moderna {
+    background: var(--bg-card-blanco);
+    border-radius: 16px;
+    padding: 32px;
+    margin-bottom: 25px;
+    box-shadow: var(--sombra-elegante);
+    border: 1px solid rgba(226, 232, 240, 0.8);
+    transition: var(--transicion);
+    position: relative;
+    overflow: hidden;
+}
+
+.card-moderna:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--sombra-hover);
+    border-color: var(--azul-vibrante-acento);
+}
+
+.card-icon {
+    font-size: 2.2rem;
+    margin-bottom: 15px;
+}
+
+.card-moderna h3 {
+    font-family: var(--font-titulos);
+    font-size: 1.4rem;
+    color: var(--texto-titulo);
+    margin-bottom: 12px;
+}
+
+/* GRID ¿QUÉ ES? E IDEA */
+.nosotros-destacado-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+    gap: 25px;
+}
+
+/* GRID MISIÓN Y VISIÓN */
+.grid-dos-columnas {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 25px;
+}
+
+.card-badge {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    background: rgba(37, 99, 235, 0.1);
+    color: var(--azul-vibrante-acento);
+    font-size: 0.75rem;
+    font-weight: 700;
+    padding: 4px 12px;
+    border-radius: 12px;
+}
+
+/* GRID DE VALORES */
+.valores-grid-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(140px, 1fr));
+    gap: 15px;
+    margin-top: 20px;
+}
+
+.valor-box {
+    background: var(--bg-gris-claro);
+    padding: 14px;
+    border-radius: 10px;
+    text-align: center;
+    font-size: 0.95rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    border: 1px solid #e2e8f0;
+}
+
+/* CHIPS DE PRINCIPIOS */
+.principios-tags-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+    margin-top: 18px;
+}
+
+.chip-principio {
+    background: var(--azul-real-principal);
+    color: #ffffff;
+    font-family: var(--font-titulos);
+    font-size: 0.85rem;
+    font-weight: 600;
+    padding: 8px 18px;
+    border-radius: 20px;
+    transition: var(--transicion);
+}
+
+.chip-principio:hover {
+    background: var(--azul-vibrante-acento);
+    transform: scale(1.05);
+}
+
+/* ==========================================================================
+   4. SECCIÓN SERVICIOS
+   ========================================================================== */
+.seccion-servicios {
+    padding: 70px 0;
+    background: rgba(255, 255, 255, 0.6);
+}
+
+.servicios-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: 25px;
+}
+
+.servicio-card {
+    background: var(--bg-card-blanco);
+    padding: 30px;
+    border-radius: 16px;
+    box-shadow: var(--sombra-elegante);
+    text-align: center;
+    border: 1px solid #e2e8f0;
+    transition: var(--transicion);
+}
+
+.servicio-card:hover {
+    transform: translateY(-6px);
+    border-color: var(--azul-vibrante-acento);
+}
+
+.servicio-icon {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+}
+
+/* ==========================================================================
+   5. SECCIÓN MULTIMEDIA
+   ========================================================================== */
+.seccion-multimedia {
+    padding: 70px 0;
+}
+
+.tarjeta-unica-container {
+    max-width: 750px;
+    margin: 0 auto;
+}
+
+.tarjeta-item-box {
+    background: var(--bg-card-blanco);
+    border-radius: 16px;
+    overflow: hidden;
+    box-shadow: var(--sombra-elegante);
+}
+
+.tarjeta-item-box img {
+    width: 100%;
+    height: auto;
+    display: block;
+}
+
+.tarjeta-info {
+    padding: 22px;
+    text-align: center;
+}
+
+/* ==========================================================================
+   6. SECCIÓN CONTACTO Y FOOTER
+   ========================================================================== */
+.seccion-contacto {
+    padding: 70px 0;
+}
+
+.contacto-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+    gap: 25px;
+}
+
+.contacto-card {
+    background: var(--bg-card-blanco);
+    padding: 28px;
+    border-radius: 14px;
+    text-decoration: none;
+    color: var(--texto-titulo);
+    text-align: center;
+    box-shadow: var(--sombra-elegante);
+    transition: var(--transicion);
+    border: 1px solid #e2e8f0;
+}
+
+.contacto-card:hover {
+    transform: translateY(-5px);
+    border-color: var(--azul-vibrante-acento);
+}
+
+.contacto-card .icon {
+    font-size: 2.2rem;
+    margin-bottom: 10px;
+}
+
+.footer {
+    background: var(--azul-oscuro-header);
+    color: #ffffff;
+    padding: 50px 0 20px;
+}
+
+.footer h3 span { color: var(--cyan-neon-glow); }
+.footer h4 { color: var(--cyan-neon-glow); margin-bottom: 15px; }
+.footer-content { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 30px; }
+.footer ul { list-style: none; }
+.footer a { color: #cbd5e1; text-decoration: none; }
+.footer-bottom { text-align: center; margin-top: 30px; padding-top: 20px; border-top: 1px solid rgba(255, 255, 255, 0.1); color: #94a3b8; }

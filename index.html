@@ -1,0 +1,247 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AsistCore - Control de Asistencia Inteligente</title>
+    
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600;700;800;900&family=Roboto:wght@300;400;500;700&display=swap" rel="stylesheet">
+    
+    <link rel="stylesheet" href="estilos.css">
+</head>
+<body>
+
+    <header class="header">
+        <div class="logo">
+            <img src="logo.jpg" alt="Logo AsistCore" class="logo-img">
+            <h1>Asist<span>Core</span></h1>
+        </div>
+
+        <nav class="nav">
+            <ul>
+                <li><a href="#inicio">Inicio</a></li>
+                <li><a href="#nosotros">Nosotros</a></li>
+                <li><a href="#servicios">Servicios</a></li>
+                <li><a href="#multimedia">Multimedia</a></li>
+                <li><a href="#contacto">Contacto</a></li>
+            </ul>
+        </nav>
+
+        <div class="header-actions">
+            <a href="#login" class="btn-login">Iniciar Sesión</a>
+        </div>
+    </header>
+    <section id="inicio" class="slider-container">
+        <div class="slider-track" id="sliderTrack">
+            
+            <div class="slide">
+                <img src="banner1.jpg" alt="AsistCore Reconocimiento Facial">
+                <div class="slide-caption">
+                    <h2></h2>
+                    <p></p>
+                </div>
+            </div>
+
+            <div class="slide">
+                <img src="banner2.jpg" alt="AsistCore Plataforma en la Nube">
+                <div class="slide-caption">
+                    <h2>Gestión Eficiente en la Nube</h2>
+                    <p>Monitorea la puntualidad y genera reportes automatizados de forma inmediata.</p>
+                </div>
+            </div>
+
+
+        </div>
+
+        <button class="slider-btn prev-btn" id="prevBtn" aria-label="Anterior">&#10094;</button>
+        <button class="slider-btn next-btn" id="nextBtn" aria-label="Siguiente">&#10095;</button>
+        
+        <div class="slider-dots">
+            <span class="dot active" data-index="0"></span>
+            <span class="dot" data-index="1"></span>
+            <span class="dot" data-index="2"></span>
+        </div>
+    </section>
+    <main>
+
+        <section id="nosotros" class="seccion-nosotros">
+            <div class="container">
+                
+                <div class="seccion-encabezado">
+                    <span class="tag-subtitulo">CONOCE ASISTCORE</span>
+                    <h2>Nuestra Identidad Institucional</h2>
+                    <p class="descripcion-subtitulo">Transformamos la gestión de asistencia con innovación, valores y tecnología inteligente.</p>
+                </div>
+
+                <div class="nosotros-destacado-grid">
+                    <div class="card-moderna card-que-es">
+                        <div class="card-icon">🚀</div>
+                        <h3>¿Qué es AsistCore?</h3>
+                        <p>
+                            AsistCore surge como una respuesta estratégica y moderna ante las limitaciones, errores operativos y la ineficiencia crónica de los sistemas tradicionales. Redefinimos el control de asistencia mediante un ecosistema digital inteligente.
+                        </p>
+                    </div>
+
+                    <div class="card-moderna card-idea">
+                        <div class="card-icon">💡</div>
+                        <h3>Idea de Negocio</h3>
+                        <p>
+                            Creamos una plataforma automatizada que registra entradas y salidas mediante biometría (rostro y huella) y tecnología QR/NFC, centralizando datos en la nube y eliminando el fraude por completo.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="grid-dos-columnas">
+                    <div class="card-moderna card-mision">
+                        <div class="card-badge">PROPÓSITO</div>
+                        <h3>Misión</h3>
+                        <p>
+                            Ofrecer una solución integral de control de asistencia mediante el desarrollo de software biológico y digital eficiente, optimizando la gestión del tiempo y la puntualidad en empresas e instituciones educativas.
+                        </p>
+                    </div>
+
+                    <div class="card-moderna card-vision">
+                        <div class="card-badge">FUTURO</div>
+                        <h3>Visión</h3>
+                        <p>
+                            Ser reconocidos como la empresa líder en soluciones tecnológicas para la gestión de tiempo y acceso en el país, destacándonos por la innovación, confiabilidad y calidad de nuestro servicio.
+                        </p>
+                    </div>
+                </div>
+
+                <div class="card-moderna card-valores">
+                    <h3>Nuestros Valores Principales</h3>
+                    <div class="valores-grid-container">
+                        <div class="valor-box"><span>🤝</span> <strong>Respeto</strong></div>
+                        <div class="valor-box"><span>🛡️</span> <strong>Responsabilidad</strong></div>
+                        <div class="valor-box"><span>💎</span> <strong>Honestidad</strong></div>
+                        <div class="valor-box"><span>❤️</span> <strong>Empatía</strong></div>
+                        <div class="valor-box"><span>🌱</span> <strong>Humildad</strong></div>
+                        <div class="valor-box"><span>🤗</span> <strong>Solidaridad</strong></div>
+                        <div class="valor-box"><span>⚖️</span> <strong>Tolerancia</strong></div>
+                    </div>
+                </div>
+
+                <div class="card-moderna card-principios">
+                    <h3>Principios de Excelencia</h3>
+                    <div class="principios-tags-container">
+                        <span class="chip-principio">Verificación</span>
+                        <span class="chip-principio">Privacidad</span>
+                        <span class="chip-principio">Emprendedurismo</span>
+                        <span class="chip-principio">Trabajo en Equipo</span>
+                        <span class="chip-principio">Excelencia</span>
+                        <span class="chip-principio">Disciplina</span>
+                        <span class="chip-principio">Calidad</span>
+                    </div>
+                </div>
+
+            </div>
+        </section>
+        <section id="servicios" class="seccion-servicios">
+            <div class="container">
+                <div class="seccion-encabezado">
+                    <span class="tag-subtitulo">TECNOLOGÍA A TU ALCANCE</span>
+                    <h2>Nuestros Servicios y Módulos</h2>
+                </div>
+
+                <div class="servicios-grid">
+                    <div class="servicio-card">
+                        <div class="servicio-icon">👤</div>
+                        <h3>Reconocimiento Facial</h3>
+                        <p>Detección biométrica de alta precisión sin contacto físico, ideal para un registro higiénico y rápido.</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">👆</div>
+                        <h3>Huella Dactilar</h3>
+                        <p>Validación mediante lectores digitales de alta sensibilidad para máxima precisión operativa.</p>
+                    </div>
+
+                    <div class="servicio-card">
+                        <div class="servicio-icon">📲</div>
+                        <h3>Código QR & NFC</h3>
+                        <p>Escanéo instantáneo mediante credenciales inteligentes y lectura con dispositivos móviles.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="multimedia" class="seccion-multimedia">
+            <div class="container">
+                <div class="seccion-encabezado">
+                    <span class="tag-subtitulo">DISEÑO Y CREDANCIALES</span>
+                    <h2>Muestra Multimedia</h2>
+                </div>
+
+                <div class="tarjeta-unica-container">
+                    <div class="tarjeta-item-box">
+                        <img src="tarjetas.jpg" alt="Tarjetas de Identificación AsistCore">
+                        <div class="tarjeta-info">
+                            <h4>Credencial Inteligente AsistCore (Vista Frontal y Posterior)</h4>
+                            <p>Equipada con código QR único y tecnología de identificación institucional.</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section id="contacto" class="seccion-contacto">
+            <div class="container">
+                <div class="seccion-encabezado">
+                    <span class="tag-subtitulo">COMUNICACIÓN DIRECTA</span>
+                    <h2>Contáctanos</h2>
+                </div>
+
+                <div class="contacto-grid">
+                    <a href="https://instagram.com/AsistCore_jx" target="_blank" class="contacto-card instagram">
+                        <div class="icon">📷</div>
+                        <h3>Instagram</h3>
+                        <p>@AsistCore_jx</p>
+                    </a>
+                    
+                    <a href="https://wa.me/50300000000" target="_blank" class="contacto-card whatsapp">
+                        <div class="icon">💬</div>
+                        <h3>WhatsApp</h3>
+                        <p>Chat Directo</p>
+                    </a>
+
+                    <a href="mailto:AsistCore@gmail.com" class="contacto-card email">
+                        <div class="icon">✉️</div>
+                        <h3>Correo Oficial</h3>
+                        <p>AsistCore@gmail.com</p>
+                    </a>
+                </div>
+            </div>
+        </section>
+        </main>
+    <footer class="footer">
+        <div class="container footer-content">
+            <div class="footer-col">
+                <h3>Asist<span>Core</span></h3>
+                <p>Plataforma inteligente de gestión de asistencia y tiempo.</p>
+            </div>
+            <div class="footer-col">
+                <h4>Navegación</h4>
+                <ul>
+                    <li><a href="#inicio">Inicio</a></li>
+                    <li><a href="#nosotros">Nosotros</a></li>
+                    <li><a href="#servicios">Servicios</a></li>
+                    <li><a href="#multimedia">Multimedia</a></li>
+                    <li><a href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+            <div class="footer-col">
+                <h4>Contacto</h4>
+                <ul>
+                    <li>Instagram: @AsistCore_jx</li>
+                    <li>Email: AsistCore@gmail.com</li>
+                </ul>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 AsistCore. Todos los derechos reservados.</p>
+        </div>
+    </footer>
+    <script src="script.js"></script>
+</body>
+</html>
